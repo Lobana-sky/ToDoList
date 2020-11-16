@@ -1,11 +1,19 @@
 import React from 'react';
+import { BsPlus } from 'react-icons/bs';
 import '../App.css';
-const Form = () => {
+
+
+
+const Form = ({setInputText}) => {
+    const inputTextHandler=(e)=>{
+        setInputText(e.target.value);
+    }
     return(
         <form>
-            <input type="text" className="todo-input"/>
+            <input onChange={inputTextHandler} type="text" className="todo-input"/>
             <button className="todo-button" type="submit">
-                <i className="fas"></i>
+            <i className="fab fa-facebook"></i>
+            <BsPlus/>
             </button>
             <div className="select">
                 <select name="todo" className="filter-todo">
