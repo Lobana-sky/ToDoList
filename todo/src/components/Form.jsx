@@ -4,14 +4,26 @@ import '../App.css';
 
 
 
-const Form = ({setInputText}) => {
+const Form = ({setInputText,setToDos,toDos,inputText}) => {
     const inputTextHandler=(e)=>{
         setInputText(e.target.value);
+        }
+    const submitToDoHandler=(e)=>{
+        e.preventDefault();
+        setToDos([
+            ...toDos,{input:inputText,completed:false,id:Math.random()*1000}
+        ]);
+        setInputText("");
+        //clear inputText state to ad next to do
     }
     return(
         <form>
-            <input onChange={inputTextHandler} type="text" className="todo-input"/>
-            <button className="todo-button" type="submit">
+            <input 
+            value={inputText} //clear textbox to be ready to the next to do
+            onChange={inputTextHandler} 
+            type="text" 
+            className="todo-input"/>
+            <button className="todo-button" type="submit" onClick={submitToDoHandler}>
             <i className="fab fa-facebook"></i>
             <BsPlus/>
             </button>
