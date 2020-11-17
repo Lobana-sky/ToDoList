@@ -1,5 +1,10 @@
-body{
+.App{
   font-family: 'Dancing Script', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body{
   background: rgb(131,58,180);
   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
@@ -17,6 +22,37 @@ form{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.todo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  list-style-type: none;
+}
+.check-btn{
+  color:white;
+  height: 32px;
+  background-color: green;
+  outline: none;
+  border: none;
+  font-size: 30px;
+}
+
+.trash-btn{
+  color:white;
+  height: 32px;
+  background-color: red;
+  outline: none;
+  border: none;
+  font-size: 30px;
+}
+
+.todo-item{
+color: white;
+font-size: 30px;
+
 }
 
 .todo-input{
