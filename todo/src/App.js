@@ -11,6 +11,11 @@ function App() {
   const [toDos,setToDos]=useState([]);
   const [status,setStatus]=useState("all");
   const [filteredToDos, setFilteredToDos]=useState([]);
+
+  //Run Once when the app start
+  useEffect(()=>
+  getLocalToDos()
+  ,[]);
   const filterHandler=()=>{
     switch(status){
     case "COMPLETED":
@@ -24,8 +29,24 @@ default:
   break;
   }
   }
-  useEffect(()=>
-    filterHandler()
+
+  const saveLocalToDos=()=>{
+  localStorage.setItem("toDos",JSON.stringify(toDos));
+  }
+
+  const getLocalToDos=()=>{
+    if(localStorage.getItem("toDos")===null){
+      localStorage.setItem("toDos",JSON.stringify([]));
+      }
+      else{
+       let toDoLocal=JSON.parse(localStorage.getItem("toDos"));
+       setToDos(toDoLocal);
+      }
+  }
+
+  useEffect(()=>{
+    filterHandler();
+    saveLocalToDos()}
     ,[status,toDos]);
 
   return (
