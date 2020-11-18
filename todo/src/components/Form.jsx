@@ -4,7 +4,7 @@ import '../App.css';
 
 
 
-const Form = ({setInputText,setToDos,toDos,inputText}) => {
+const Form = ({setStatus,setInputText,setToDos,toDos,inputText}) => {
     const inputTextHandler=(e)=>{
         setInputText(e.target.value);
         }
@@ -15,6 +15,9 @@ const Form = ({setInputText,setToDos,toDos,inputText}) => {
         ]);
         setInputText("");
         //clear inputText state to ad next to do
+    }
+    const statusHandler=(e)=>{
+        setStatus(e.target.value);
     }
     return(
         <form>
@@ -28,10 +31,10 @@ const Form = ({setInputText,setToDos,toDos,inputText}) => {
             <BsPlus/>
             </button>
             <div className="select">
-                <select name="todo" className="filter-todo">
-                    <option value="all">All</option>
-                    <option value="completed">completed</option>
-                    <option value="uncompleted">uncompleted</option>
+                <select onChange={statusHandler} name="todo" className="filter-todo">
+                    <option value="ALL">All</option>
+                    <option value="COMPLETED">completed</option>
+                    <option value="UNCOMPLETED">uncompleted</option>
                 </select>
             </div>
         </form>
