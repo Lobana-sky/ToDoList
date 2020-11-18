@@ -10,6 +10,7 @@ const ToDoList = ({toDos,setToDos}) =>{
                 setToDos={setToDos} 
                 toDos={toDos}
                 todo={todo}
+                //pass a refrence to itself
                 key={todo.id} 
                 text={todo.input}
                 />

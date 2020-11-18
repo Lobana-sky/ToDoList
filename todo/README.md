@@ -1,3 +1,5 @@
+add react state management chrome extension to your browser and look at component and thier state on inspect screen
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

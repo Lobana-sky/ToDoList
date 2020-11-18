@@ -1,5 +1,4 @@
 .App{
-  font-family: 'Dancing Script', cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,8 +27,9 @@ form{
   display: flex;
   justify-content: center;
   align-items: center;
-  
   list-style-type: none;
+  margin: 1em; 
+
 }
 .check-btn{
   color:white;
@@ -50,9 +50,16 @@ form{
 }
 
 .todo-item{
-color: white;
+color: black;
+background-color: aliceblue;
 font-size: 30px;
-
+height: 30px;
+width: 200px;
+padding: 2px;
+}
+.completed{
+  text-decoration: line-through;
+  color: green;
 }
 
 .todo-input{
