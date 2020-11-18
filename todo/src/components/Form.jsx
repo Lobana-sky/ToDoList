@@ -27,7 +27,6 @@ const Form = ({setStatus,setInputText,setToDos,toDos,inputText}) => {
             type="text" 
             className="todo-input"/>
             <button className="todo-button" type="submit" onClick={submitToDoHandler}>
-            <i className="fab fa-facebook"></i>
             <BsPlus/>
             </button>
             <div className="select">

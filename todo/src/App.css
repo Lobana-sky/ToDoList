@@ -35,66 +35,59 @@ form{
 
 }
 .check-btn{
-  color:white;
-  height: 32px;
   background-color: green;
-  outline: none;
-  border: none;
+  
+}
+.trash-btn,.check-btn{
+  color:white;
+  height: 34px;
   font-size: 30px;
 }
-
 .trash-btn{
-  color:white;
-  height: 32px;
   background-color: red;
-  outline: none;
-  border: none;
-  font-size: 30px;
+  
 }
 
 .todo-item{
 color: black;
 background-color: aliceblue;
-font-size: 30px;
-height: 30px;
+font-size: 25px;
+height: 32px;
 width: 200px;
-padding: 2px;
+padding-left: 0.5em;
 }
+
 .completed{
   text-decoration: line-through;
   color: green;
 }
 
-.todo-input{
-  height: 30px;
-  outline: none;
-  border: none;
-  font-family: 'Amatic SC', cursive;
-  font-family: 'Indie Flower', cursive;
-  text-transform: uppercase;
-  padding: 1px;
+.todo-button ,.filter-todo{
+  color:orange;
+  height: 34px;
+  background-color: papayawhip;
   font-size: 30px;
 }
-
-.todo-button ,.filter-todo {
-  color:orange;
+.todo-input{
+  padding-left: 0.5em;
+  color:rgb(63, 45, 13);
   height: 32px;
   background-color: papayawhip;
+  font-size: 25px;
+}
+.filter-todo{
+  margin-left: 2em;
+}
+
+.filter-todo,.todo-button ,.filter-todo,.todo-input,.trash-btn,.check-btn
+{
   outline: none;
   border: none;
-  font-size: 30px;
+  font-weight: bold;
   font-family: 'Amatic SC', cursive;
   font-family: 'Indie Flower', cursive;
   text-transform: uppercase;
+  
 }
 
-.filter-todo{
-  margin-left: 2em;
-  color:orange;
-  height: 30px;
-  background-color: papayawhip;
-  outline: none;
-  border: none;
-  font-size: 20px;
-  font-weight: bold;
-}
+
