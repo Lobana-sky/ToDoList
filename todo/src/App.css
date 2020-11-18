@@ -38,7 +38,7 @@ header h1{
   height: 40px;
   background-color: rgba(245,6,111,0.2) !important;
   margin-left: 1em !important;
-  border: 0.2em dashed rgb(122, 8, 117) !important;
+  border: 0.15em dashed rgb(122, 8, 117) !important;
 }
 .trash-btn{
   color: rgb(122, 8, 117) !important;
