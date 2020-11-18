@@ -1,8 +1,9 @@
-.App{
+/* .App{
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+  
+} */
 body{
   font-family: 'Amatic SC', cursive;
   font-family: 'Indie Flower', cursive;
@@ -20,11 +21,12 @@ header h1{
 }
 
 form{
-  margin:2em;
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-items: center;
 }
+
 
 .todo{
   display: flex;

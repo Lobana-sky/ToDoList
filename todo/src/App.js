@@ -1,7 +1,6 @@
 import React ,{ useState,useEffect } from "react";
 import './App.css';
 
-// import {Container,Row} from 'react-bootstrap'
 //importing components
 import Form from "./components/Form";
 import ToDoList from './components/ToDoList';
@@ -50,7 +49,7 @@ default:
     ,[status,toDos]);
 
   return (
-    <div className="App">
+    <div>
         <header>
           <h1>My List</h1>
         </header>
