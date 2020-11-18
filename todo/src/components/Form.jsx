@@ -36,15 +36,20 @@ const Form = ({setStatus,setInputText,setToDos,toDos,inputText}) => {
                     label="My new task" 
                     variant="standard" />
 
-                <Button variant="contained" color="secondary" className="todo-button" type="submit" onClick={submitToDoHandler}>
-                    <BsPlus/>
-                    </Button>
+                <Button 
+                variant="contained" 
+                color="secondary" 
+                className="todo-button" 
+                type="submit" 
+                onClick={submitToDoHandler}>
+                <BsPlus/>
+                </Button>
                 </Paper>
                 </Grid>
 
                 <Grid item>
                 <Paper>
-                <div className="select">
+                <div >
                         <select onChange={statusHandler} name="todo" className="filter-todo">
                             <option value="ALL">All</option>
                             <option value="COMPLETED">completed</option>

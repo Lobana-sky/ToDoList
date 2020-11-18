@@ -1,9 +1,9 @@
 body{
-  font-family: 'Amatic SC', cursive;
-  font-family: 'Indie Flower', cursive;
+  /* font-family: 'Amatic SC', cursive;
+  font-family: 'Indie Flower', cursive; */
   text-transform: uppercase;
   background: rgb(245,6,111);
-background: radial-gradient(circle, rgba(245,6,111,1) 0%, rgba(244,239,244,1) 100%);
+  background: radial-gradient(circle, rgba(245,6,111,1) 0%, rgba(244,239,244,1) 100%);
 }
 header{
   color:white;
@@ -50,10 +50,11 @@ header h1{
   background-color: aliceblue;
   font-size: 25px;
   height: 40px;
-  width: 200px;
+  max-width: 400px;
+  min-width: 400px;
   padding-left: 0.5em;
   border-radius: 0.15em;
-
+  overflow: hidden;
 }
 
 .list-icon-section{
@@ -79,13 +80,13 @@ color:white !important;
   margin-bottom: 1em;
   font-weight: 800;
 }
+
 .MuiButton-label {
 font-size: 20px;
 }
 
 .todo-input{
   padding-left: 0.5em;
-  color:rgb(221, 146, 17);
   font-size: 25px;
   margin-bottom: 1em !important;
   max-width: 200px;
@@ -101,7 +102,6 @@ font-size: 20px;
   font-size: 15px;
   min-width: 250px;
   padding-left: 0.5em;
-
 }
 
 .filter-todo,.todo-button ,.filter-todo,.todo-input,.trash-btn,.check-btn
@@ -109,8 +109,8 @@ font-size: 20px;
   outline: none;
   border: none;
   font-weight: bold;
-  font-family: 'Amatic SC', cursive;
-  font-family: 'Indie Flower', cursive;
+  /* font-family: 'Amatic SC', cursive;
+  font-family: 'Indie Flower', cursive; */
   text-transform: uppercase;
   
 }
