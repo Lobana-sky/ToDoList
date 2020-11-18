@@ -1,5 +1,7 @@
 import React from 'react';
 import {BsFillTrashFill,BsCheckCircle} from 'react-icons/bs';
+import {Button} from '@material-ui/core';
+
 
 const ToDo =({text,todo,setToDos,toDos})=>{
     const deleteHandler=()=>{
@@ -20,8 +22,8 @@ const ToDo =({text,todo,setToDos,toDos})=>{
     return(
         <div className="todo">
             <li className={`todo-item ${todo.completed ?"completed":""}`}>{text}</li>
-            <button onClick={completeHandler} className="check-btn"><BsCheckCircle/></button>
-            <button onClick={deleteHandler} className="trash-btn"><BsFillTrashFill/></button>
+            <Button onClick={completeHandler} className="check-btn"><BsCheckCircle/></Button>
+            <Button onClick={deleteHandler} className="trash-btn"><BsFillTrashFill/></Button>
         </div>
         );
     }

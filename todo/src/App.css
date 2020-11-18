@@ -1,15 +1,9 @@
-/* .App{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-} */
 body{
   font-family: 'Amatic SC', cursive;
   font-family: 'Indie Flower', cursive;
   text-transform: uppercase;
-  background: rgb(131,58,180);
-  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background: rgb(245,6,111);
+background: radial-gradient(circle, rgba(245,6,111,1) 0%, rgba(244,239,244,1) 100%);
 }
 header{
   color:white;
@@ -18,15 +12,15 @@ header{
 }
 header h1{
   font-size: 50px;
+  text-align: center;
 }
 
-form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
+.MuiPaper-root{
+  background-color: initial !important;
 }
-
+.MuiPaper-elevation1 {
+   box-shadow: initial !important;
+}
 
 .todo{
   display: flex;
@@ -37,21 +31,19 @@ form{
 
 }
 .check-btn{
-  background-color: green;
+  color: rgb(41, 129, 113) !important;
   
 }
 .trash-btn,.check-btn{
-  color:white;
-  height: 34px;
-  font-size: 30px;
+  height: 40px;
 }
 .trash-btn{
-  background-color: red;
+  color: rgb(122, 8, 117) !important;
   
 }
 
 .todo-item{
-color: black;
+  color: rgb(122, 8, 117)  !important;
 background-color: aliceblue;
 font-size: 25px;
 height: 32px;
@@ -59,26 +51,49 @@ width: 200px;
 padding-left: 0.5em;
 }
 
+.list-icon-section{
+text-align: center;
+color:#fdf9fd !important;
+font-size: 40px;
+opacity: 0.3;
+}
+.MuiFormLabel-root {
+color:white !important;
+}
+
 .completed{
   text-decoration: line-through;
-  color: green;
+  color: rgb(41, 129, 113) !important;
 }
 
 .todo-button ,.filter-todo{
-  color:orange;
-  height: 34px;
-  background-color: papayawhip;
-  font-size: 30px;
+  color:#802580 !important;
+  height: 46px;
+  background-color: rgb(250, 245, 245) !important;
+  margin-bottom: 1em;
+  font-weight: 800;
 }
+.MuiButton-label {
+font-size: 20px;
+}
+
 .todo-input{
   padding-left: 0.5em;
-  color:rgb(63, 45, 13);
-  height: 32px;
-  background-color: papayawhip;
+  color:rgb(221, 146, 17);
   font-size: 25px;
+  margin-bottom: 1em !important;
+
+}
+.MuiInputBase-input{
+  color: white !important;
+  text-transform: uppercase;
 }
 .filter-todo{
-  margin-left: 2em;
+  border-radius: 0.15em;
+  font-size: 15px;
+  min-width: 200px;
+  padding-left: 0.5em;
+
 }
 
 .filter-todo,.todo-button ,.filter-todo,.todo-input,.trash-btn,.check-btn

@@ -1,5 +1,9 @@
 import React ,{ useState,useEffect } from "react";
 import './App.css';
+import {Grid,Paper} from '@material-ui/core';
+import {AiOutlineSwapLeft,AiOutlineSwapRight,AiOutlineMenu} from 'react-icons/ai';
+
+
 
 //importing components
 import Form from "./components/Form";
@@ -49,14 +53,35 @@ default:
     ,[status,toDos]);
 
   return (
-    <div>
-        <header>
+      <Grid container >
+        <Grid item xs={12}>
+          <Paper>
+          <header>
           <h1>My List</h1>
-        </header>
-        <Form setStatus={setStatus} setInputText={setInputText} setToDos={setToDos} toDos={toDos} inputText={inputText}/>
-        <ToDoList filteredToDos={filteredToDos} setToDos={setToDos} toDos={toDos}/>
+          </header>
+          </Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Paper  >
+          <Form setStatus={setStatus} setInputText={setInputText} setToDos={setToDos} toDos={toDos} inputText={inputText}/>
+          </Paper>
+        </Grid>
+        <Grid item xs={12} className="list-icon-section">
+          <Paper>
+         <AiOutlineSwapLeft/>
+         <AiOutlineMenu/>
 
-    </div>
+         <AiOutlineSwapRight/>
+          </Paper>
+        </Grid>
+        
+        <Grid item xs={12}>
+          <Paper>
+          <ToDoList filteredToDos={filteredToDos} setToDos={setToDos} toDos={toDos}/>
+          </Paper>
+        </Grid>
+
+      </Grid>
   );
 }
 
