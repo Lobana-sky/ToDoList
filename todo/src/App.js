@@ -52,13 +52,15 @@ function App() {
 
   return (
       <Grid container >
+        
         <Grid item xs = {12}>
           <Paper>
-          <header>
-          <h1>My List</h1>
-          </header>
+            <header>
+               <h1>My List</h1>
+            </header>
           </Paper>
         </Grid>
+
         <Grid item xs = {12}>
           <Paper>
             <Form 
@@ -72,7 +74,7 @@ function App() {
         
         <Grid item xs = {12}>
           <Paper>
-          <ToDoList filteredToDos = {filteredToDos} setToDos = {setToDos} toDos = {toDos}/>
+             <ToDoList filteredToDos = {filteredToDos} setToDos = {setToDos} toDos = {toDos}/>
           </Paper>
         </Grid>
 

@@ -4,7 +4,7 @@ import ToDo from './ToDo';
 const ToDoList = ({ filteredToDos, toDos, setToDos }) => {
     return(
         <div className = "todo-container">
-            <ul className = "todo-list"></ul>
+            <ul className = "todo-list">
             {filteredToDos.map(todo => 
                 <ToDo 
                     setToDos = {setToDos} 
@@ -15,6 +15,7 @@ const ToDoList = ({ filteredToDos, toDos, setToDos }) => {
                     text = {todo.input}
                 />
             )}
+            </ul>
         </div>
     );
 }
