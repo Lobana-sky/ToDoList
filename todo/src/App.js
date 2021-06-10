@@ -17,13 +17,13 @@ function App() {
   useEffect(()=>
   getLocalToDos()
   ,[]);
-  const filterHandler=()=>{
+  const filterHandler = () => {
     switch(status){
       case "COMPLETED":
-        setFilteredToDos(toDos.filter(item=>item.completed===true));
+        setFilteredToDos(toDos.filter(item => item.completed === true));
         break;
       case "UNCOMPLETED":
-        setFilteredToDos(toDos.filter(item=>item.completed===false));
+        setFilteredToDos(toDos.filter(item => item.completed === false));
         break;
       default:
         setFilteredToDos(toDos);
@@ -31,40 +31,45 @@ function App() {
   }
   }
 
-  const saveLocalToDos=()=>{
+  const saveLocalToDos = () => {
   localStorage.setItem("toDos",JSON.stringify(toDos));
   }
 
-  const getLocalToDos=()=>{
-    if(localStorage.getItem("toDos")===null){
+  const getLocalToDos = () => {
+    if(localStorage.getItem("toDos") === null){
       localStorage.setItem("toDos",JSON.stringify([]));
       }
       else{
-       let toDoLocal=JSON.parse(localStorage.getItem("toDos"));
+       let toDoLocal = JSON.parse(localStorage.getItem("toDos"));
        setToDos(toDoLocal);
       }
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     filterHandler();
     saveLocalToDos()}
     ,[status,toDos]);
 
   return (
       <Grid container >
-        <Grid item xs={12}>
+        <Grid item xs = {12}>
           <Paper>
           <header>
           <h1>My List</h1>
           </header>
           </Paper>
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs = {12}>
           <Paper  >
-          <Form setStatus={setStatus} setInputText={setInputText} setToDos={setToDos} toDos={toDos} inputText={inputText}/>
+          <Form 
+          setStatus = {setStatus} 
+          setInputText = {setInputText}
+          setToDos = {setToDos} 
+          toDos = {toDos} 
+          inputText = {inputText}/>
           </Paper>
         </Grid>
-        <Grid item xs={12} className="list-icon-section">
+        <Grid item xs = {12} className = "list-icon-section">
           <Paper>
          <AiOutlineSwapLeft/>
          <AiOutlineMenu/>
@@ -73,9 +78,9 @@ function App() {
           </Paper>
         </Grid>
         
-        <Grid item xs={12}>
+        <Grid item xs = {12}>
           <Paper>
-          <ToDoList filteredToDos={filteredToDos} setToDos={setToDos} toDos={toDos}/>
+          <ToDoList filteredToDos = {filteredToDos} setToDos = {setToDos} toDos = {toDos}/>
           </Paper>
         </Grid>
 

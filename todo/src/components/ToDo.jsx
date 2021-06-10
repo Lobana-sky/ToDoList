@@ -3,12 +3,12 @@ import {BsFillTrashFill,BsCheckCircle} from 'react-icons/bs';
 import {Button} from '@material-ui/core';
 
 
-const ToDo =({text,todo,setToDos,toDos})=>{
-    const deleteHandler=()=>{
-        setToDos(toDos.filter(item=>item.id!==todo.id));
+const ToDo =({ text, todo, setToDos, toDos })=>{
+    const deleteHandler = () => {
+        setToDos(toDos.filter(item => item.id !== todo.id));
     }
 
-    const completeHandler=()=>{
+    const completeHandler = () => {
         setToDos(toDos.map(item => {
              if(item.id === todo.id){
                  return{
@@ -20,10 +20,10 @@ const ToDo =({text,todo,setToDos,toDos})=>{
          ));
     }
     return(
-        <div className="todo">
-            <li className={`todo-item ${todo.completed ?"completed":""}`}>{text}</li>
-            <Button onClick={completeHandler} className="check-btn"><BsCheckCircle/></Button>
-            <Button onClick={deleteHandler} className="trash-btn"><BsFillTrashFill/></Button>
+        <div className = "todo">
+            <li className = {`todo-item ${todo.completed ? "completed" : "" }`}>{text}</li>
+            <Button onClick = {completeHandler} className = "check-btn"><BsCheckCircle/></Button>
+            <Button onClick = {deleteHandler} className = "trash-btn"><BsFillTrashFill/></Button>
         </div>
         );
     }

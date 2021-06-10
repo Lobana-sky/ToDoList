@@ -5,10 +5,10 @@ import { Button, TextField, Grid, Paper } from '@material-ui/core';
 import '../App.css';
 
 const Form = ({ setStatus, setInputText, setToDos, toDos, inputText }) => {
-    const inputTextHandler=(e)=>{
+    const inputTextHandler = (e) => {
         setInputText(e.target.value);
         }
-    const submitToDoHandler=(e)=>{
+    const submitToDoHandler = (e) => {
         e.preventDefault();
         setToDos([
             ...toDos, { input: inputText ,completed: false, id: Math.random()*1000 }
@@ -16,32 +16,31 @@ const Form = ({ setStatus, setInputText, setToDos, toDos, inputText }) => {
         setInputText("");
         //clear inputText state to add next to do
     }
-    const statusHandler=(e)=>{
+    const statusHandler = (e) => {
         setStatus(e.target.value);
     }
     return(
         <form >
             <Grid  container
-            direction="row"
-            justify="space-evenly"
-            alignItems="center"
+            direction = "row"
+            justify = "space-evenly"
+            alignItems = "center"
             >
             <Grid item>
                 <Paper>
-                    <TextField value={inputText} //clear textbox to be ready to the next to do
-                        onChange={inputTextHandler} 
-                        type="text" 
-                        className="todo-input" 
-                        id="standard-basic" 
-                        label="My new task" 
-                        variant="standard" />
-
+                    <TextField value = {inputText} //clear textbox to be ready to the next to do
+                        onChange = {inputTextHandler} 
+                        type = "text" 
+                        className = "todo-input" 
+                        id = "standard-basic" 
+                        label = "My new task" 
+                        variant = "standard" />
                     <Button 
-                    variant="contained" 
-                    color="secondary" 
-                    className="todo-button" 
-                    type="submit" 
-                    onClick={submitToDoHandler}>
+                    variant = "contained" 
+                    color = "secondary" 
+                    className = "todo-button" 
+                    type = "submit" 
+                    onClick = {submitToDoHandler}>
                         <BsPlus/>
                     </Button>
                 </Paper>
@@ -50,10 +49,10 @@ const Form = ({ setStatus, setInputText, setToDos, toDos, inputText }) => {
             <Grid item>
                 <Paper>
                     <div>
-                        <select onChange={statusHandler} name="todo" className="filter-todo">
-                            <option value="ALL">All</option>
-                            <option value="COMPLETED">completed</option>
-                            <option value="UNCOMPLETED">uncompleted</option>
+                        <select onChange = {statusHandler} name = "todo" className = "filter-todo">
+                            <option value = "ALL">All</option>
+                            <option value = "COMPLETED">completed</option>
+                            <option value = "UNCOMPLETED">uncompleted</option>
                         </select>
                     </div>
                 </Paper>
