@@ -3,8 +3,6 @@ import './App.css';
 import {Grid,Paper} from '@material-ui/core';
 import {AiOutlineSwapLeft,AiOutlineSwapRight,AiOutlineMenu} from 'react-icons/ai';
 
-
-
 //importing components
 import Form from "./components/Form";
 import ToDoList from './components/ToDoList';
@@ -21,15 +19,15 @@ function App() {
   ,[]);
   const filterHandler=()=>{
     switch(status){
-    case "COMPLETED":
-setFilteredToDos(toDos.filter(item=>item.completed===true));
-break;
-case "UNCOMPLETED":
-setFilteredToDos(toDos.filter(item=>item.completed===false));
-break;
-default:
-  setFilteredToDos(toDos);
-  break;
+      case "COMPLETED":
+        setFilteredToDos(toDos.filter(item=>item.completed===true));
+        break;
+      case "UNCOMPLETED":
+        setFilteredToDos(toDos.filter(item=>item.completed===false));
+        break;
+      default:
+        setFilteredToDos(toDos);
+        break;
   }
   }
 
