@@ -3,7 +3,7 @@ import {BsFillTrashFill,BsCheckCircle} from 'react-icons/bs';
 import {Button} from '@material-ui/core';
 
 
-const ToDo =({ text, todo, setToDos, toDos })=>{
+const ToDo =({ text, todo, setToDos, toDos }) => {
     const deleteHandler = () => {
         setToDos(toDos.filter(item => item.id !== todo.id));
     }

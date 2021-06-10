@@ -14,7 +14,7 @@ function App() {
   const [filteredToDos, setFilteredToDos]=useState([]);
 
   //Run Once when the app start
-  useEffect(()=>
+  useEffect( () =>
   getLocalToDos()
   ,[]);
   const filterHandler = () => {
@@ -60,21 +60,13 @@ function App() {
           </Paper>
         </Grid>
         <Grid item xs = {12}>
-          <Paper  >
-          <Form 
-          setStatus = {setStatus} 
-          setInputText = {setInputText}
-          setToDos = {setToDos} 
-          toDos = {toDos} 
-          inputText = {inputText}/>
-          </Paper>
-        </Grid>
-        <Grid item xs = {12} className = "list-icon-section">
           <Paper>
-         <AiOutlineSwapLeft/>
-         <AiOutlineMenu/>
-
-         <AiOutlineSwapRight/>
+            <Form 
+            setStatus = {setStatus} 
+            setInputText = {setInputText}
+            setToDos = {setToDos} 
+            toDos = {toDos} 
+            inputText = {inputText}/>
           </Paper>
         </Grid>
         
